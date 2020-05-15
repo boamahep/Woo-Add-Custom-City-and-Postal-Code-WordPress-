@@ -1,0 +1,91 @@
+/**
+ * Code by Gift-Tech Solutions, Ghana.
+ * For more info call 0248833753 or visit https://gifttechsolutions.com/
+ * Add or modify Cities in Ghana with postal code
+*/
+
+add_filter( 'ry_wc_city_select_cities', 'my_cities' );
+/**
+ * Replace XX with the country code. Instead of YYY, ZZZ use actual state codes.
+ * The City list can list of city name with postcode or just city name.
+ */
+function my_cities( $cities ) {
+    $cities['GH'] = array(
+        'AA' => array( // city name with postcoe
+            ['Accra Metropolitan (Accra)', GA000],
+            ['Adenta Municipal (Adenta)', GD000]
+        ),
+		 'AF' => array( // city name with postcoe
+            ['Asunafo North (Goaso)', BU000],
+			 ['Asunafo South (Kukuom)', BV000],
+			  ['Asutifi North (Kenyasi)', BQ000],
+			  ['Asutifi South (Hwidiem)', BR000],
+			  ['Tano North (Duayaw Nkwanta)', B2000],
+            ['Tano South (Bechem)', B3000]
+        ),
+		 'AH' => array( // city name with postcoe
+            ['Kumasi Metropolitan (kumasi)', AK000],
+            ['Ejura/Sekyedumase (Ejura)', AJ000]
+        ),
+		 'BE' => array( // city name with postcoe
+            ['Atebubu-Amanten Municipal', BA000],
+            ['Kintampo Municipal (Kintampo)', BK000],
+			 ['Kintampo South (Jema)', BL000],
+			  ['Nkoranza Municipal (Nkoranza)', BN000],
+			  ['Nkoranza North (Busunya)', BO000],
+			  ['Pru East (Yeji)', BP000],
+			  ['Pru West (Yeji)', BP000],
+			  ['Sene East (Kajaji)', BG000],
+			   ['Sene West (Kwame Danso)', BH000],
+			   ['Techiman North (Tuobodom)', BX000],
+			  ['Techiman Municipal (Techiman)', BT000]
+        ),
+		 'BO' => array( // city name with postcoe
+            ['Banda	District (Banda Ahenkro)', BC000],
+		 ['Berekum Municipal (Berekum)', BB000],
+			  ['Dormaa Central (Dormaa-Ahenkro)', BD000],
+			  ['Dormaa East (Wamfie)', BE000],
+			  ['Dormaa West (Nkrankwanta)', BF000],
+			  ['Jaman North (Sampa)', BJ000],
+			  ['Jaman South	(Drobo)', BI000],
+			  ['Sunyani Municipal (Sunyani)', BS000],
+			  ['Sunyani West (Odumase)', BY000],
+			  ['Tain District (Nsawkaw)', BZ000],
+            ['Wenchi Municipal (Wenchi)', BW000]
+        ),
+		 'CP' => array( // city name with postcoe
+            ['Cape Coast Municipal', CC000]
+        ),
+		 'EP' => array( // city name with postcoe
+            ['New-Juaben (Koforidua)', EN000]
+        ),
+		 'NE' => array( // city name with postcoe
+            ['Nalerigu', NE000]
+        ),
+		 'NP' => array( // city name with postcoe
+            ['Tamale', NT000]
+        ),
+		 'OT' => array( // city name with postcoe
+            ['Dambai', VR000]
+        ),
+		'SV' => array( // city name with postcoe
+            ['Damongo', N5000]
+        ),
+		'TV' => array( // city name with postcoe
+            ['Ho', VH000]
+        ),
+		'UE' => array( // city name with postcoe
+            ['Bolgatanga', UB000]
+        ),
+		'UW' => array( // city name with postcoe
+            ['Wa', XW000]
+        ),
+		'WN' => array( // city name with postcoe
+            ['Sefwi Wiawso', WG000]
+        ),
+        'WP' => array( // just city name
+            ['Sekondi', WS000]
+        )
+    );
+    return $cities;
+}
