@@ -1,0 +1,30 @@
+/**
+ * Code by Gift-Tech Solutions, Ghana.
+ * For more info call 0248833753 or visit https://gifttechsolutions.com/
+ * Add or modify States
+ */
+add_filter( 'woocommerce_states', 'custom_woocommerce_states' );
+
+function custom_woocommerce_states( $states ) {
+
+  $states['GH'] = array(
+    'AA' => 'Greater Accra Region',
+	'AF' => 'Ahafo Region',
+	'AH' => 'Ashanti Region',
+	'BE' => 'Bono East Region',
+	'BO' => 'Bono Region',
+	'CP' => 'Central Region',
+	'EP' => 'Eastern Region',
+	'NE' => 'North East Region',
+	'NP' => 'Northern Region',
+	'OT' => 'Oti Region',
+	'SV' => 'Savannah Region',
+ 	'TV' => 'Volta Region',
+	'UE' => 'Upper East Region',
+	'UW' => 'Upper West Region',
+	'WN' => 'Western North Region',
+    'WP' => 'Western Region'
+  );
+
+  return $states;
+}
